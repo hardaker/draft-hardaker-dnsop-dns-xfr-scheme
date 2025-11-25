@@ -55,11 +55,10 @@ normative:
   RFC8499:
   RFC4033:
   RFC8198:
-  RFC5936:
+  RFC5936:  # DNS Zone Transfer
   RFC9103:
 
 informative:
-  RFC5936:  # DNS Zone Transfer
   RFC7766:  # DNS Transport over TCP
   RFC9156:  # QNAME Minimisation
   RFC9110:  # HTTP Semantics
