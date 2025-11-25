@@ -92,7 +92,7 @@ referencing DNS servers from which DNS zone contents can be transferred.
 
 {::boilerplate bcp14-tagged}
 
-# Syntax of a DNS Transfer Protocol URI
+# Syntax of a DNS Transfer Protocol URI {#syntax}
 
 Current DNS transfer protocols exist in three fundamental forms:
 Authoratative Transfers (AXFR) {{RFC5936}}, Incremental Zone Transfers
@@ -101,8 +101,6 @@ defines URI schemes for all three of these DNS transfer protocols.
 
 This document uses the Augmented Backus-Naur Form (ABNF) of
 {{RFC5234}}.
-
-## Syntax of a 'xfr' URI
 
 ~~~
      xfr-URI = scheme ":" host [ ":" port ] "/" zone
@@ -120,7 +118,7 @@ and "xot" URI schemes are hierarchical URIs.  Developers MUST NOT use
 a generic hierarchical URI parser to parse a "axfr", "ixfr" or "xot" URI.
 
 
-# URI Scheme Semantics
+# URI Scheme Semantics {#semantics}
 
 The "axfr", "ixfr" or "xot" URI schemes are used to refer to a DNS
 server that offers zone transfer support.  These three protocols each
@@ -144,7 +142,7 @@ have a trailing "." (for example "zone.example.").
 
 TBD
 
-# Security Considerations
+# Security Considerations {#security}
 
 The "axfr", "ixfr" or "xot" URI schemes do not introduce new security
 considerations beyond what is specified in their respective RFCs (AXFR
@@ -157,7 +155,83 @@ preferred if privacy or integrity of the zone contents are a concern.
 
 # IANA Considerations
 
-TBD
+This section contains the registration information for the "axfr",
+"ixfr" or "xot" URI schemes (in accordance with {{RFC4395}}).
+
+## "axfr" URI Registration
+
+URI scheme name: axfr
+
+Status: permanent
+
+URI scheme syntax: See Section {{syntax}}
+
+URI scheme semantics: See Section {{semantics}}
+
+Encoding considerations: There are no encoding considerations beyond
+those in {{RFC3986}}.
+
+Applications/protocols that use this URI scheme name:
+
+   The "axfr" URI scheme is intended to be used by applications with
+   a need to identify a DNS server supporting authoritative transfer
+   over DNS using the AXFR protocol for a zone.
+
+Interoperability considerations: N/A
+
+Security considerations: See Section {{security}}
+
+Contact: Wes Hardaker <ietf@hardakers.net>
+
+## "ixfr" URI Registration
+
+URI scheme name: ixfr
+
+Status: permanent
+
+URI scheme syntax: See Section {{syntax}}
+
+URI scheme semantics: See Section {{semantics}}
+
+Encoding considerations: There are no encoding considerations beyond
+those in {{RFC3986}}.
+
+Applications/protocols that use this URI scheme name:
+
+   The "ixfr" URI scheme is intended to be used by applications with
+   a need to identify a DNS server supporting authoritative transfer
+   over DNS using the IXFR protocol for a zone.
+
+Interoperability considerations: N/A
+
+Security considerations: See Section {{security}}
+
+Contact: Wes Hardaker <ietf@hardakers.net>
+
+## "xot" URI Registration
+
+URI scheme name: xot
+
+Status: permanent
+
+URI scheme syntax: See Section {{syntax}}
+
+URI scheme semantics: See Section {{semantics}}
+
+Encoding considerations: There are no encoding considerations beyond
+those in {{RFC3986}}.
+
+Applications/protocols that use this URI scheme name:
+
+   The "xot" URI scheme is intended to be used by applications with
+   a need to identify a DNS server supporting authoritative transfer
+   over DNS using the XoT protocol for a zone.
+
+Interoperability considerations: N/A
+
+Security considerations: See Section {{security}}
+
+Contact: Wes Hardaker <ietf@hardakers.net>
 
 --- back
 
