@@ -146,7 +146,14 @@ TBD
 
 # Security Considerations
 
-TBD
+The "axfr", "ixfr" or "xot" URI schemes do not introduce new security
+considerations beyond what is specified in their respective RFCs (AXFR
+{{RFC5936}}, IXFR {{RFC5936}} or XoT {{RFC9103}}).  These schemes are
+intended for use in documentation and configuration files that refer
+to servers offering DNS zone transfers.  Documentation and
+configuration files should carefully consider which protocol is most
+suitable for use, and if possible the "xot" protocol should be
+preferred if privacy or integrity of the zone contents are a concern.
 
 # IANA Considerations
 
