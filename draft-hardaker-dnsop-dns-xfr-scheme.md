@@ -238,5 +238,14 @@ Contact: Wes Hardaker <ietf@hardakers.net>
 # Acknowledgments
 {:numbered="false"}
 
-TBD
+# Examples
+
+The following are example XFR URIs specifying an 'axfr' URI for the
+DNS root zone, an 'ixfr' URI for example.com, and a 'xot' URI for
+zone.example on port 8853:
+
+- axfr:b.root-servers.net/.
+- ixfr:ns.example.com/example.com.
+- xot:ns.zone.example:8853/zone.example.
+
 
