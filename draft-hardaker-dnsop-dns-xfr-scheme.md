@@ -54,6 +54,7 @@ normative:
   RFC3986:
   RFC3986:
   RFC4033:
+  RFC4395:
   RFC5234:
   RFC5936:  # DNS Zone Transfer
   RFC8198:
@@ -102,13 +103,13 @@ defines URI schemes for all three of these DNS transfer protocols.
 This document uses the Augmented Backus-Naur Form (ABNF) of
 {{RFC5234}}.
 
-~~~
-     xfr-URI = scheme ":" host [ ":" port ] "/" zone
-     scheme = "axfr" / "ixfr" / "xot"
-     zone = TBD
-~~~
+```
+xfr-URI = scheme ":" host [ ":" port ] "/" zone
+scheme = "axfr" / "ixfr" / "xot"
+zone = TBD
+```
 
-'host' and 'port' are specified in {{RFC3986}}.
+host and port are specified in {{RFC3986}}.
 
 The 'scheme' signifies which DNS zone transfer protocol should be used
 (AXFR {{RFC5936}}, IXFR {{RFC5936}} or XoT {{RFC9103}}).  While these
@@ -127,7 +128,7 @@ respective specifications and are beyond the scope of this document.
 
 The required 'host' part of the xfr URI denotes the DNS server host.
 
-As specified in each transfer protocols specifications, the <port>
+As specified in each transfer protocols specifications, the 'port'
 part, if present, denotes the port on which the DNS server is awaiting
 requests.  If absent for the axfr and ixfr transfer protocols, this
 SHOULD be TCP port 53.  If absent for the xot transfer protocol, the
@@ -239,6 +240,7 @@ Contact: Wes Hardaker <ietf@hardakers.net>
 {:numbered="false"}
 
 # Examples
+{:numbered="false"}
 
 The following are example XFR URIs specifying an 'axfr' URI for the
 DNS root zone, an 'ixfr' URI for example.com, and a 'xot' URI for
