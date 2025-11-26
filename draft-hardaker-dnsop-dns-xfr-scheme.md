@@ -50,22 +50,15 @@ author:
     email: ietf@hardakers.net
 
 normative:
-  BCP237:
   RFC3986:
-  RFC3986:
-  RFC4033:
   RFC4395:
   RFC5234:
   RFC5936:  # DNS Zone Transfer
-  RFC8198:
   RFC8499:
-  RFC8976:
   RFC9103:
 
 informative:
   RFC7766:  # DNS Transport over TCP
-  RFC9156:  # QNAME Minimisation
-  RFC9110:  # HTTP Semantics
 
 --- abstract
 
