@@ -103,11 +103,13 @@ defines URI schemes for all three of these DNS transfer protocols.
 This document uses the Augmented Backus-Naur Form (ABNF) of
 {{RFC5234}}.
 
-```
-xfr-URI = scheme ":" host [ ":" port ] "/" zone
-scheme = "axfr" / "ixfr" / "xot"
-zone = TBD
-```
+~~~
+    xfr-URI = scheme ":" host [ ":" port ] "/" zone
+
+    scheme = "axfr" / "ixfr" / "xot"
+
+    zone = TBD
+~~~
 
 host and port are specified in {{RFC3986}}.
 
@@ -138,10 +140,6 @@ The 'zone' signifies the zone to be transferred and MUST be a fully
 qualified domain name.  Note that 'zone' MAY be "." to refer to the
 DNS root zone.  When not referring to the root zone, the 'zone' SHOULD
 have a trailing "." (for example "zone.example.").
-
-# Operational Considerations
-
-TBD
 
 # Security Considerations {#security}
 
