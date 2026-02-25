@@ -247,6 +247,31 @@ Security considerations: See Section {{security}}
 
 Contact: Wes Hardaker <ietf@hardakers.net>
 
+## "xoh" URI Registration
+
+URI scheme name: xoh
+
+Status: permanent
+
+URI scheme syntax: See Section {{syntax}}
+
+URI scheme semantics: See Section {{semantics}}
+
+Encoding considerations: There are no encoding considerations beyond
+those in {{RFC3986}}.
+
+Applications/protocols that use this URI scheme name:
+
+   The "xoh" URI scheme is intended to be used by applications with
+   a need to identify a DNS server supporting authoritative transfer
+   over DNS over the HTTPS protocol for a zone.
+
+Interoperability considerations: N/A
+
+Security considerations: See Section {{security}}
+
+Contact: Wes Hardaker <ietf@hardakers.net>
+
 --- back
 
 # Acknowledgments
@@ -262,5 +287,6 @@ zone.example on port 8853:
 - axfr:b.root-servers.net/.
 - ixfr:ns.example.com/example.com.
 - xot:ns.zone.example:8853/zone.example.
+- xoh:ns.zone.example/zone.example.
 
 
